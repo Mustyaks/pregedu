@@ -5,19 +5,21 @@ import doctor from "../assets/doctor.png";
 const WelcomeCard = () => {
   return (
     <View style={styles.card}>
-      <Text style={styles.title}>Welcome</Text>
+      <Text style={styles.title}>Sannu da zuwa</Text>
       <View style={styles.content}>
         <Image source={doctor} style={styles.image} />
         <View style={styles.textContainer}>
           <Text style={styles.description}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Barka da zuwa cikin manhajar mu ta ciki. Muna farin ciki da samun ki
+            a cikin wannan tafiya mai cike da farin ciki da fatan alheri. Allah
+            Ya ba ki sauƙi da lafiya, Amin."
           </Text>
-          <TouchableOpacity style={styles.button}>
+          {/* <TouchableOpacity style={styles.button}>
             <Text style={styles.buttonText}>Watch</Text>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View>
       </View>
-      <Text style={styles.exploreMore}>Explore more</Text>
+      {/* <Text style={styles.exploreMore}>Explore more</Text> */}
     </View>
   );
 };

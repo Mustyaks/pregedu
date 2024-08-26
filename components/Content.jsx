@@ -11,18 +11,34 @@ const Content = () => {
   return (
     <ScrollView style={styles.content}>
       <WelcomeCard />
-      <CategoryCard title="Prenatal Care" color="#B8E0FF" image={prenatal} />
       <CategoryCard
-        title="Nutritional Tips"
+        title="Prenatal Care/Kula Da Ciki"
+        color="#B8E0FF"
+        image={prenatal}
+        screen="PrenatalCare"
+        text="Barka da zuwa cikin sashin kula da ciki. Muna tare dake don tabbatar da lafiyarki da ta jaririnki tun daga farkon ciki har zuwa haihuwa."
+      />
+      <CategoryCard
+        title="Nutritional Tips/Shawarwarin Abinci"
         color="#FFD6D6"
         image={nutritional}
+        screen="NutritionalTips"
+        text="Barka da zuwa cikin sashin shawarwarin abinci. Anan zaki sami bayanai da shawarwari kan abincin da zai taimaka miki da jaririnki cikin lafiya."
       />
       <CategoryCard
-        title="Postpartum Care"
+        title="Postpartum Care/Kula Bayan Haihuwa"
         color="#FFD6FF"
         image={postpartum}
+        screen="PostpartumCare"
+        text="Barka da zuwa cikin sashin kula bayan haihuwa. Mun shirya miki shawarwari da bayanai don taimakawa lafiyarki da ta jaririnki bayan haihuwa."
       />
-      <CategoryCard title="Family Planning" color="#D6FFE1" image={fplanning} />
+      <CategoryCard
+        title="Family Planning/Tsarin Iyali"
+        color="#D6FFE1"
+        image={fplanning}
+        screen="FamilyPlanning"
+        text="Barka da zuwa cikin sashin tsarin iyali. Anan zaki sami bayanai da shawarwari kan yadda za ki tsara iyalinki da tsaro cikin hikima."
+      />
     </ScrollView>
   );
 };

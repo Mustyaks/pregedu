@@ -1,19 +1,27 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
 
-const CategoryCard = ({ title, color, image }) => {
+const CategoryCard = ({ title, color, image, screen, text }) => {
+  const navigation = useNavigation();
+
+  const handleNavigation = (screen) => {
+    navigation.navigate(screen);
+  };
+
   return (
     <View style={[styles.card, { backgroundColor: color }]}>
       <Text style={styles.title}>{title}</Text>
       <View style={styles.content}>
         <Image source={image} style={styles.image} />
         <View style={styles.textContainer}>
-          <Text style={styles.description}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </Text>
+          <Text style={styles.description}>{text}</Text>
           <View style={styles.buttonContainer}>
-            <TouchableOpacity style={styles.button}>
-              <Text style={styles.buttonText}>Watch</Text>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => handleNavigation(screen)}
+            >
+              <Text style={styles.buttonText}>Karanta</Text>
             </TouchableOpacity>
             {/* <TouchableOpacity style={styles.moreButton}>
               <Text style={styles.moreButtonText}>More</Text>
